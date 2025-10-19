@@ -15,6 +15,7 @@ Before building your DLL, make sure you export the required callback:
 extern "C" __declspec(dllexport) LRESULT CALLBACK YuB_X(int code, WPARAM wParam, LPARAM lParam) {
     return CallNextHookEx(NULL, code, wParam, lParam);
 }
+```
 ---
 
 ## Quick start
