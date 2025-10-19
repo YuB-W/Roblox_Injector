@@ -1,10 +1,20 @@
 # YuB-X DLL Signer (sign-yubx)
 
-signing service for DLLs.  
-Upload a DLL and get a signed, encrypted DLL back.
+Signing service for DLLs.  
+Upload a DLL and get a **signed + encrypted** DLL back.
 
-> **Warning:** this service signs binaries. Use responsibly and keep access restricted.
+> ⚠️ **Warning:** This service signs binaries. Use responsibly and keep access restricted.
 
+---
+
+## Add this to your `dllmain.cpp`
+
+Before building your DLL, make sure you export the required callback:
+
+```cpp
+extern "C" __declspec(dllexport) LRESULT CALLBACK YuB_X(int code, WPARAM wParam, LPARAM lParam) {
+    return CallNextHookEx(NULL, code, wParam, lParam);
+}
 ---
 
 ## Quick start
