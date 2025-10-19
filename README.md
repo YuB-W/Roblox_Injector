@@ -12,10 +12,9 @@ Upload a DLL and get a signed, encrypted DLL back.
 From a workstation with `curl`:
 
 ```bash
-# HTTPS (recommended)
+# 1 HTTPS (recommended)
 curl -F "file=@yubx.dll" https://sign-yubx.yub-x.com/upload -o yubx.dll
 
-# Just open the injector
 # Make sure yubx.dll exists and is properly signed
-# Then open your injector as usual
+# 2 Then open your injector as usual
 
